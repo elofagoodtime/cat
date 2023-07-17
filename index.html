@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teddy Bear Program</title>
+    <style>
+        .teddy {
+            text-align: center;
+            font-size: 36px;
+            color: brown;
+            background-image: url('https://example.com/fuzzy-texture.jpg');
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="teddy" class="teddy">
+        <pre>
+    .--.  .-_'''-.   .---.   .--.  .-_'''-.   _________
+   |__| '   _    \  | ,_|  |__| '   _    \ |  _   _  |
+ .-|  |  | |_)   |,-./  ) .--..-| |_)   | |_/ | | \_|
+ | '-'  /  |  __'  \  '_ ' _  \  |  __'  '.`-| |-'   
+  `-.-'   _| |  \  _`,/ \ \`-.\_| |  \  \  |  | |    
+    |    |____| |____/   \_____|____| |___| |  | |    
+    '--'                            '--'     '--'    
+        </pre>
+        <p>If you're reading this, I think you're great! ❤️</p>
+    </div>
+
+    <button id="button">Click me!</button>
+
+    <script>
+        const teddyBear = document.getElementById('teddy');
+        const button = document.getElementById('button');
+
+        button.addEventListener('click', function() {
+            teddyBear.classList.add('rotate');
+        });
+    </script>
+</body>
+</html>
