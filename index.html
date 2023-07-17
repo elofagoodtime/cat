@@ -8,15 +8,24 @@
             font-size: 36px;
             color: brown;
             background-image: url('https://www.photos-public-domain.com/wp-content/uploads/2011/11/plush-pink-fabric-texture.jpg');
+            background-size: cover;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
         }
 
         .rotate {
             transform: rotate(45deg);
         }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div id="teddy" class="teddy">
+    <div class="teddy">
         <pre>
     .--.  .-_'''-.   .---.   .--.  .-_'''-.   _________
    |__| '   _    \  | ,_|  |__| '   _    \ |  _   _  |
@@ -28,15 +37,15 @@
         </pre>
         <p>If you're reading this, I think you're great!</p>
     </div>
-
-    <button id="button">Click me!</button>
-
+    <div class="button-container">
+        <button id="button">Click me!</button>
+    </div>
     <script>
-        const teddyBear = document.getElementById('teddy');
+        const teddyBear = document.querySelector('.teddy');
         const button = document.getElementById('button');
 
         button.addEventListener('click', function() {
-            teddyBear.classList.add('rotate');
+            teddyBear.classList.toggle('rotate');
         });
     </script>
 </body>
